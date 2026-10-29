@@ -12,7 +12,9 @@ RUN npm install -g @anthropic-ai/claude-code@2.1.310 \
 
 # Claude Code won't start without a key; the proxy replaces this one. The proxy also
 # only allows the bundle's hosts, so skip update checks and telemetry.
+# NODE_USE_ENV_PROXY: Node fetch ignores HTTPS_PROXY without it.
 ENV ANTHROPIC_API_KEY=placeholder \
+    NODE_USE_ENV_PROXY=1 \
     DISABLE_AUTOUPDATER=1 \
     CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
 
