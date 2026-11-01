@@ -27,7 +27,7 @@ jobs:
   image:
     needs: plan
     # Native arm64 for the homelab nodes; amd64 (for GKE) is built under QEMU.
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-26.04-arm
     permissions:
       contents: read
       packages: write
