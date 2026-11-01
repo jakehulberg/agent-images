@@ -1,7 +1,7 @@
 # Claude Code, for Airlock sandboxes. No credentials in here: the session sidecar
 # writes the Agent Vault proxy settings to /session/env, and the proxy adds the
 # real API key on the way out.
-FROM node:22-bookworm-slim
+FROM node:26-bookworm-slim
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends git ca-certificates curl \
