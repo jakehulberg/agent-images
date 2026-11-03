@@ -7,7 +7,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends git ca-certificates curl \
  && rm -rf /var/lib/apt/lists/*
 
-RUN npm install -g @anthropic-ai/claude-code@2.1.310 \
+RUN npm install -g @anthropic-ai/claude-code@2.1.316 \
  && npm cache clean --force
 
 # Claude Code won't start without a key; the proxy replaces this one. The proxy also
